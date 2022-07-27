@@ -14,7 +14,9 @@ variables:
   imageRepository: 'staticsite'
   containerRegistry: 'skibigcottonwoodregistry.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
-  tag: '$(Build.BuildId)'
+  tag: |
+  latest
+  '$(Build.BuildId)'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
